@@ -27,13 +27,13 @@ export default function Header() {
                         </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                                Dropdown
+                                Hook
                             </a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a className="dropdown-item" href="#">Action</a>
-                                <a className="dropdown-item" href="#">Another action</a>
-                                <div className="dropdown-divider" />
-                                <a className="dropdown-item" href="#">Something else here</a>
+                                <NavLink to="/usestate" className="dropdown-item" >UseStateDemo</NavLink>
+                                <NavLink to="/changecolor" className="dropdown-item" >Change Color</NavLink>
+                                <NavLink to="/useeffect" className="dropdown-item" >UseEffectDemo</NavLink>
+                                <NavLink to="/reduxhook" className="dropdown-item" >ReduxHook</NavLink>
                             </div>
                         </li>
                         <li className="nav-item">
