@@ -5,13 +5,13 @@ export default function UseStateDemo() {
 
   //useState: giúp khai báo state và phương thức setState trong function component
   //let {id,name} = product;
-  // this.state={
+  //? this.state={
   //   like:0
   // }
-  // this.setState({
+  //? this.setState({
   //   like: this.state.like + 1
   // })
-  // let [state,setState] = useState({like:1})//trả về mảng có 2 phần tử [pt1,pt2]
+  //? let [state,setState] = useState({like:1})//trả về mảng có 2 phần tử [pt1,pt2]
 
   // let [state,setState] = useState({
   //   like:1, 
