@@ -1,4 +1,5 @@
 // rxr
+import { ADD_COMMENT } from "../type/FaceAppType";
 
 const initialState = {
     arrComment:[
@@ -9,8 +10,14 @@ const initialState = {
 
 export const FaceAppReducer = (state = initialState, action) => {
     switch (action.type) {
+        case ADD_COMMENT:
+            console.log(action.userComment);
+            state.arrComment = [
+                ...state.arrComment,
+                action.userComment
+            ]
 
-
+            return {...state}
         default:
             return state
     }

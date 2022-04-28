@@ -10,6 +10,8 @@ import UseStateDemo from './pages/Hook/UseStateDemo';
 import DemoChangeColor from './pages/Hook/DemoChangeColor';
 import UseEffectDemo from './pages/Hook/UseEffectDemo';
 import ReduxHook from './pages/Hook/ReduxHook';
+import AxiosDemo from './pages/AxiosAPI/AxiosDemo';
+import AxiosRFC from './pages/AxiosAPI/AxiosRFC';
 
 
 function App() {
@@ -34,7 +36,8 @@ function App() {
         <Route exact path="/changecolor" component={DemoChangeColor} />
         <Route exact path="/useeffect" component={UseEffectDemo} />
         <Route exact path="/reduxhook" component={ReduxHook} />
-
+        <Route exact path="/axiosdemo" component={AxiosDemo} />
+        <Route exact path="/axiosrfc" component={AxiosRFC} />
 
         <Route exact path="/" component={Home} />
       </Switch>
