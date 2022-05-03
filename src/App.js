@@ -12,6 +12,7 @@ import UseEffectDemo from './pages/Hook/UseEffectDemo';
 import ReduxHook from './pages/Hook/ReduxHook';
 import AxiosDemo from './pages/AxiosAPI/AxiosDemo';
 import AxiosRFC from './pages/AxiosAPI/AxiosRFC';
+import AxiosMiddleWare from './pages/AxiosAPI/AxiosMiddleWare';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         <Route exact path="/reduxhook" component={ReduxHook} />
         <Route exact path="/axiosdemo" component={AxiosDemo} />
         <Route exact path="/axiosrfc" component={AxiosRFC} />
+        <Route exact path="/axiosmiddleware" component={AxiosMiddleWare} />
 
         <Route exact path="/" component={Home} />
       </Switch>

@@ -50,9 +50,13 @@ export default class AxiosDemo extends Component {
 
 
     render() {
-
+      
         return (
             <div className='container'>
+
+                  {/* 
+                  Han chế gọi setState trong render => khi setState sẽ render lại UI => lại chạy lại setState
+                  getMovieList() */}
                 {console.log(this.state.mangPhim)}
                 <button onClick={() => {
                     this.getMovieList();
@@ -63,5 +67,9 @@ export default class AxiosDemo extends Component {
                 </div>
             </div>
         )
+    }
+
+    componentDidMount(){
+        this.getMovieList();
     }
 }
