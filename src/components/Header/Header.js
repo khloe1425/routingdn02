@@ -48,7 +48,10 @@ export default function Header() {
                             </div>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link disabled">Disabled</a>
+                            <NavLink exact className="nav-link" to="/profile">Profile</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink exact className="nav-link" to="/hoc">HOC</NavLink>
                         </li>
                     </ul>
                     <form className="form-inline my-2 my-lg-0">

@@ -13,6 +13,9 @@ import ReduxHook from './pages/Hook/ReduxHook';
 import AxiosDemo from './pages/AxiosAPI/AxiosDemo';
 import AxiosRFC from './pages/AxiosAPI/AxiosRFC';
 import AxiosMiddleWare from './pages/AxiosAPI/AxiosMiddleWare';
+import Detail from './pages/Detail/Detail';
+import Profile from './pages/Profile/Profile';
+import HOC from './pages/HOC/HOC';
 
 
 function App() {
@@ -40,6 +43,10 @@ function App() {
         <Route exact path="/axiosdemo" component={AxiosDemo} />
         <Route exact path="/axiosrfc" component={AxiosRFC} />
         <Route exact path="/axiosmiddleware" component={AxiosMiddleWare} />
+        <Route exact path="/detail/:id" component={Detail} />
+        <Route exact path="/profile" component={Profile} />
+        <Route exact path="/hoc" component={HOC} />
+
 
         <Route exact path="/" component={Home} />
       </Switch>
