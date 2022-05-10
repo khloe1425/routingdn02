@@ -16,6 +16,8 @@ import AxiosMiddleWare from './pages/AxiosAPI/AxiosMiddleWare';
 import Detail from './pages/Detail/Detail';
 import Profile from './pages/Profile/Profile';
 import HOC from './pages/HOC/HOC';
+import { HomeTemplate } from './templates/HomeTemplate';
+import { FormTemplate } from './templates/FormTemplate';
 
 
 function App() {
@@ -32,7 +34,7 @@ function App() {
           </div>
         }} />
 
-        <Route exact path="/home" render={(propsRoute) => {
+        {/* <Route exact path="/home" render={(propsRoute) => {
           return <div>
               <Header />
               <Home {...propsRoute}/>
@@ -43,12 +45,19 @@ function App() {
               <Header />
               <About {...propsRoute}/>
           </div>
-        }} />
+        }} /> */}
+
+        <HomeTemplate  path="/home" component={Home}/>
+        <HomeTemplate  path="/about" component={About}/>
 
         {/* <Route exact path="/home" component={Home} />
         <Route exact path="/about" component={About} /> */}
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/register" component={Register} />
+        {/* <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} /> */}
+
+        <FormTemplate path="/login" component={Login}/>
+        <FormTemplate path="/register" component={Register}/>
+
         <Route exact path="/usestate" component={UseStateDemo} />
         <Route exact path="/changecolor" component={DemoChangeColor} />
         <Route exact path="/useeffect" component={UseEffectDemo} />
@@ -61,7 +70,8 @@ function App() {
         <Route exact path="/hoc" component={HOC} />
 
 
-        <Route exact path="/" component={Home} />
+        <HomeTemplate path="/" component={Home} />
+
       </Switch>
 
     </BrowserRouter>
