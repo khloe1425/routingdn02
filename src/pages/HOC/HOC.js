@@ -16,7 +16,7 @@ export default function HOC() {
                 <button data-toggle="modal" data-target="#exampleModal" className="btn btn-danger" onClick={() => { 
                     // setComponentForm(<Login/>)
                     const action ={
-                        type:'OPEN_LOGIN',
+                        type:'OPEN_FORM',
                         Component:<Login/>,
                         handleSubmit:() => { 
                             alert("Xử lý Login");
@@ -28,6 +28,16 @@ export default function HOC() {
                  }} >Login</button>
                 <button data-toggle="modal" data-target="#exampleModal" className="btn btn-warning" onClick={() => { 
                     // setComponentForm(<Register/>)
+                    const action ={
+                        type:'OPEN_FORM',
+                        Component:<Register/>,
+                        handleSubmit:() => { 
+                            alert("Xử lý Register");
+                         }
+                    }
+
+                    dispatch(action);
+
                  }}>Register</button>
             </div>
 

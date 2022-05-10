@@ -1,6 +1,6 @@
 
-const DefaultComponent = (props) =>{
-    return(
+const DefaultComponent = (props) => {
+    return (
         <div>
             DefaultComponent
         </div>
@@ -9,21 +9,21 @@ const DefaultComponent = (props) =>{
 
 
 const initialState = {
-    Component:<div>DefaultComponent</div>,
-    handleSubmit:() => { 
+    Component: <div>DefaultComponent</div>,
+    handleSubmit: () => {
 
-     }
+    }
 }
 
 export const ModalReducer = (state = initialState, action) => {
-  switch (action.type) {
+    switch (action.type) {
 
-  case "OPEN_LOGIN":
-      state.Component = action.Component;
-      state.handleSubmit = action.handleSubmit;
-      return {...state};
-
-  default:
-    return state
-  }
+        case "OPEN_FORM":
+            state.Component = action.Component;
+            state.handleSubmit = action.handleSubmit;
+            return { ...state };
+       
+        default:
+            return state
+    }
 }

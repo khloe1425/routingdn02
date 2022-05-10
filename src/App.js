@@ -22,18 +22,31 @@ function App() {
   return (
     <BrowserRouter>
       {/* Route: khai báo đường dẫn tới component */}
-      <Header/>
-      
-      <Switch>
-        <Route exact path="/help" render={(propsRoute) => { 
-            return<div>
-                <p>Help</p>
-                {/* <Help/> */}
-            </div>
-         }}/>
+      {/* <Header/> */}
 
-        <Route exact path="/home" component={Home} />
-        <Route exact path="/about" component={About} />
+      <Switch>
+        <Route exact path="/help" render={(propsRoute) => {
+          return <div>
+            <p>Help</p>
+            {/* <Help/> */}
+          </div>
+        }} />
+
+        <Route exact path="/home" render={(propsRoute) => {
+          return <div>
+              <Header />
+              <Home {...propsRoute}/>
+          </div>
+        }} />
+          <Route exact path="/about" render={(propsRoute) => {
+          return <div>
+              <Header />
+              <About {...propsRoute}/>
+          </div>
+        }} />
+
+        {/* <Route exact path="/home" component={Home} />
+        <Route exact path="/about" component={About} /> */}
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/usestate" component={UseStateDemo} />
